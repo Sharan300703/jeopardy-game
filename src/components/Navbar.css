@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #333;
+    color: #000;
+    background-color: #fca311;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .page-title {
+    display: flex;
+    /* padding: 0px 50px; */
+}

@@ -1,0 +1,121 @@
+.card-grid {
+  /* Create as many columns as needed, each at least 180px wide */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+
+  /* Center each column in the grid */
+  justify-items: center;
+}
+
+.category-column {
+  /* Stack the title and the card container vertically */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.category-title {
+  font-size: 1.3em;
+  color: #e5e5e5;
+  margin: 0;
+}
+
+/* Container for the cards, reversed so 5-point is at the top */
+.card-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  align-items: center;
+}
+
+.card {
+  /* Make the cards larger */
+  font-size: 1.5em;
+  width: 200px;
+  height: 85px;
+  background-color: #fca311;
+  color: #000;
+  display: grid;
+  place-items: center; /* centers text horizontally & vertically */
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: #000;
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: #f7eede;
+  scale: 1.1;
+  transition: scale 0.2s;
+}
+
+.card.answered {
+  background-color: #444;
+  cursor: default;
+}
+
+.card.answered:hover {
+  background-color: #444;
+  scale: 1.0;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure modal is on top */
+}
+
+/* Modal Content */
+.modal-content {
+  text-align: center;
+  font-size: 1.5em;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 4px;
+  width: 600px;
+  height: 300px;
+  /* max-width: 500px; */
+  /* width: 90%; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-content h2 {
+  /* margin-top: 0; */
+  margin: 10 auto;
+}
+
+.modal-content p {
+  margin: 10px auto;
+}
+
+.modal-content button {
+  /* margin-top: 10px; */
+  margin: 30px auto;
+  padding: 10px;
+  width: 100px;
+  background-color: #fca311;
+  border: 1px solid #14213d;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #f7eede;
+  transition: background-color 0.3s;
+}
