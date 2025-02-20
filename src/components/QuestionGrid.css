@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 0px;
 
   /* Center each column in the grid */
   justify-items: center;
@@ -42,7 +42,7 @@
   font-size: 1.5em;
   width: 200px;
   font-weight: 600;
-  height: 85px;
+  height: 78px;
   color: rgba(255, 255, 255, 0.949);
   background-color: rgba(148, 91, 255, 0.716);
   display: grid;

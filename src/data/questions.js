@@ -40,7 +40,7 @@ export const data = [
     questions: [
       {
         value: 1,
-        question: 'What is Earth?',
+        question: "What is Earth?",
         answer: "A planet (not sure tho)",
         questionAnswered: false,
       },
@@ -53,8 +53,7 @@ export const data = [
       },
       {
         value: 3,
-        question:
-          "What is the unit of measuring light?",
+        question: "What is the unit of measuring light?",
         answer: "Lumens (not years dumbass)",
         questionAnswered: false,
       },
@@ -119,15 +118,13 @@ export const data = [
       },
       {
         value: 2,
-        question:
-          'Name the protagonist from the spiderverse franchise.',
+        question: "Name the protagonist from the spiderverse franchise.",
         answer: "Miles Morales",
         questionAnswered: false,
       },
       {
         value: 3,
-        question:
-          'Who played Batman in the iconic dark knight franchise?',
+        question: "Who played Batman in the iconic dark knight franchise?",
         answer: "Christian Bale",
         questionAnswered: false,
       },
@@ -140,7 +137,8 @@ export const data = [
       },
       {
         value: 5,
-        question: "What is the first animated feature film?",
+        question:
+          "What was the first feature-length animated movie ever released?",
         answer: "Snow White and the Seven Dwarfs",
         questionAnswered: false,
       },
@@ -163,7 +161,7 @@ export const data = [
       },
       {
         value: 3,
-        question: 'What is the most viewed music video on youtube?',
+        question: "What is the most viewed music video on youtube?",
         answer: "Baby Shark",
         questionAnswered: false,
       },
