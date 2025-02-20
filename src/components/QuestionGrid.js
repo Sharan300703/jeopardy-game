@@ -16,7 +16,7 @@ export default function QuestionGrid({ data, onCardClick }) {
                 onClick={() => onCardClick(category.topic, q)}
               >
                 <span>
-                  {q.value} {q.value > 1 ? "Points" : "Point"}
+                  {q.value} {q.value > 1 ? "pts" : "pt"}
                 </span>
               </div>
             ))}

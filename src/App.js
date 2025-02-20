@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Particles from './components/Particles';
 
 // components
 import Navbar from "./components/Navbar";
@@ -61,31 +62,45 @@ export default function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar />
-      <QuestionGrid data={gameData} onCardClick={handleCardClick} />
+    
+      <div className="main-page" style={{ width: '100%', height: '100vh', position: 'relative' }}>
+        <Particles
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+        <div className="main-content">
+          <Navbar />
+          <QuestionGrid data={gameData} onCardClick={handleCardClick} />
 
-      {/* Render the modal only if showModal is true and we have a selected question */}
-      {showModal && selectedQuestion && (
-        <div className="modal-overlay" onClick={closeModal}>
-          {/* Stop click events on modal-content from closing the modal */}
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>{selectedQuestion.question.question}</h2>
+          {/* Render the modal only if showModal is true and we have a selected question */}
+          {showModal && selectedQuestion && (
+            <div className="modal-overlay" onClick={closeModal}>
+              {/* Stop click events on modal-content from closing the modal */}
+              <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <h3 className="popup-title">{selectedQuestion.topic}</h3>
+                <div className="popup-heading">{selectedQuestion.question.question}</div>
 
-            {/* If we haven't revealed the answer yet, show the Reveal button. Otherwise, show the answer and Close button. */}
-            {!revealAnswer ? (
-              <button onClick={handleRevealAnswer}>Reveal Answer</button>
-            ) : (
-              <>
-                <p>
-                  <strong>Answer:</strong> {selectedQuestion.question.answer}
-                </p>
-                <button onClick={closeModal}>Close</button>
-              </>
-            )}
-          </div>
+                {/* If we haven't revealed the answer yet, show the Reveal button. Otherwise, show the answer and Close button. */}
+                {!revealAnswer ? (
+                  <button onClick={handleRevealAnswer}>Answer</button>
+                ) : (
+                  <>
+                    <p className="answer">
+                      <strong>Answer:</strong> {selectedQuestion.question.answer}
+                    </p>
+                    <button className="close-button" onClick={closeModal}>Close</button>
+                  </>
+                )}
+              </div>
+            </div>
+          )}
         </div>
-      )}
-    </div>
+      </div>
   );
 }

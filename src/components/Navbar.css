@@ -1,9 +1,13 @@
 .navbar {
-    background-color: #333;
-    color: #000;
-    background-color: #fca311;
+    background-color: transparent;
+    color: rgb(251, 251, 251);
+    font-weight: 700;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px rgb(128, 59, 255);
+    filter: drop-shadow(0px 0px 5px rgba(111, 0, 255, 0.678));
     display: flex;
     justify-content: center;
+    letter-spacing: 0.8px;
 }
 
 .navbar .page-title {

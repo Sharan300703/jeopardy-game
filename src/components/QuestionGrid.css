@@ -21,6 +21,10 @@
 .category-title {
   font-size: 1.3em;
   color: #e5e5e5;
+  text-shadow: 2px 2px 5px rgba(148, 91, 255, 0.716);
+  filter: drop-shadow(2px 2px 5px rgba(148, 91, 255, 0.716));
+  font-weight: 900;
+  letter-spacing: 0.8px;
   margin: 0;
 }
 
@@ -34,33 +38,41 @@
 
 .card {
   /* Make the cards larger */
+  margin: 5px;
   font-size: 1.5em;
   width: 200px;
+  font-weight: 600;
   height: 85px;
-  background-color: #fca311;
-  color: #000;
+  color: rgba(255, 255, 255, 0.949);
+  background-color: rgba(148, 91, 255, 0.716);
   display: grid;
   place-items: center; /* centers text horizontally & vertically */
   cursor: pointer;
-  border-radius: 4px;
-  box-shadow: #000;
-  transition: background-color 0.3s;
+  border-radius: 6px;
+  transition: all 0.3s;
+  text-shadow: 2px 2px 0px #ffffff4c;
 }
 
 .card:hover {
   background-color: #f7eede;
-  scale: 1.1;
-  transition: scale 0.2s;
+  transform: translateY(-4px);
+  color: rgb(95, 46, 186);
+  text-shadow: 2px 2px 0px rgba(148, 91, 255, 0.716);
+  box-shadow: 0px 5px 3px rgba(148, 91, 255, 0.716);
 }
 
 .card.answered {
-  background-color: #444;
+  background-color: transparent;
   cursor: default;
+  border: 1px solid #ffffff41;
+  text-shadow: none;
+  color: rgba(148, 91, 255, 0.716);
 }
 
 .card.answered:hover {
-  background-color: #444;
-  scale: 1.0;
+  transform: none;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 /* Modal Overlay */
@@ -70,7 +82,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.815);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,25 +91,44 @@
 
 /* Modal Content */
 .modal-content {
+  padding: 10px;
   text-align: center;
-  font-size: 1.5em;
-  background: #fff;
-  color: #000;
+  font-size: 1.5rem;
+  background: #0000008f;
+  border: 2px solid rgb(128, 59, 255);
+  box-shadow: 0px 0px 70px rgb(128, 59, 255);
+  color: #fff;
   padding: 20px;
   border-radius: 4px;
-  width: 600px;
-  height: 300px;
+  width: 700px;
+  height: 60%;
   /* max-width: 500px; */
   /* width: 90%; */
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-.modal-content h2 {
-  /* margin-top: 0; */
-  margin: 10 auto;
+.popup-title {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 999;
+  width: 250px;
+  padding: 20px 5px;
+  background-color: black;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-self: center;
+  border: 2px solid rgb(128, 59, 255);
+  top: -20%;
+}
+
+.popup-heading {
+  font-size: 2.5rem;
+  position: relative;
+  top: -40px;
 }
 
 .modal-content p {
@@ -108,14 +139,32 @@
   /* margin-top: 10px; */
   margin: 30px auto;
   padding: 10px;
-  width: 100px;
-  background-color: #fca311;
-  border: 1px solid #14213d;
-  border-radius: 4px;
+  width: 150px;
+  height: 50px;
+  background-color: rgba(128, 59, 255, 0.932);
+  border-radius: 6px;
   cursor: pointer;
+  border: none !important;
+  outline: none !important;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.close-button {
+  height: 50px;
 }
 
 .modal-content button:hover {
-  background-color: #f7eede;
-  transition: background-color 0.3s;
+  background-color: rgba(0, 0, 0, 0.486);
+  transform: translateY(-2px);
+  color: rgb(142, 81, 255);
+  border: 2px solid rgb(115, 59, 220) !important;
+}
+
+.answer {
+  color: rgb(142, 81, 255);
+  font-weight: 700;
+  filter: drop-shadow(2px 2px 5px rgb(111, 0, 255));
+  text-shadow: 0px 0px 7px rgb(111, 0, 255);
 }
